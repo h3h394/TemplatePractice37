@@ -13,29 +13,73 @@
 <body id="body">
 
     <div class="module showModule">
-        <iframe width="940" height="528" src="https://www.youtube.com/embed/yNVLjsAvp3E?start=1" frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="1280" height="720" src="https://www.youtube.com/embed/yNVLjsAvp3E?start=1" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope;" allowfullscreen></iframe>
         <i class="fas fa-times fa-2x" id="closeModule"></i>
     </div>
 
+    <div class="gallery-module galleryHide">
+        <div class="picture"></div>
+        <i class="fas fa-times fa-lg" id="moduleOneClose"></i>
+    </div>
+
+    <div id="scrollUp"><a href="#home"><i class="fas fa-angle-up fa-2x" id="scroll"></i></a></div>
+
+    <div id="brochure">
+        <p>BROCHURE</p>
+    </div>
+
+    <div class="brochure-modal hide">
+        <div class="box">
+            <div class="heading">
+                <span>DOWNLOAD</span>
+                <h2>Brochure</h2>
+                <p id="brochureClose">CLOSE X</p>
+            </div>
+            <div class="desc">
+                <h4>Enter Your Info Below And We Will Send<br> You The Brochure To Your Inbox!</h4>
+            </div>
+            <div class="info">
+                <div class="info-wrap">
+                    <div class="row">
+                        <p>NAME:</p>
+                        <input type="text" name="Name" placeholder="Enter your name">
+                    </div>
+                    <div class="row">
+                        <p>EMAIL ADDRESS:</p>
+                        <input type="email" name="Email" placeholder="Your email address">
+                    </div>
+                    <div class="row">
+                        <input type="checkbox">
+                        <a href="#"><span>Yes!</span>I would like to subscribe to your amazing Business Newsletter</a>
+                    </div>
+                    <div class="row">
+                        <a href="#" class="btn">SEND ME BROCHURE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <nav>
-        <div class="container">
-            <div class="menu-wrap">
+        <div class="container hide">
+            <div class="wrap">
                 <div class="logo">
                     <img src="img/logo.png" alt="logo">
                 </div>
-                <div class="menu">
-                    <a href="#">SPEAKERS</a>
-                    <a href="#">SCHEDULE</a>
-                    <a href="#">TICKETS</a>
-                    <a href="#">BLOG</a>
-                </div>
+                <i class="fas fa-bars" id="burger"></i>
             </div>
-            <a href="#" class="btn">REGISTER</a>
+            <div class="menu hide">
+                <a href="#">SPEAKERS</a>
+                <a href="#">SCHEDULE</a>
+                <a href="#">TICKETS</a>
+                <a href="#">BLOG</a>
+            </div>
+            <a href="#" class="btn hide">REGISTER</a>
         </div>
     </nav>
 
-    <section class="main">
+    <section class="main" id="home">
         <div class="container">
             <h1>Business Conference 2019</h1>
             <hr>
@@ -54,7 +98,7 @@
                 <a href="#">SEE HERO 2</a>
             </div>
             <div class="icon">
-                <i class="fas fa-angle-down fa-2x"></i>
+                <a href="#conference"><i class="fas fa-angle-down fa-2x"></i></a>
             </div>
             <div class="popup-container hide">
                 <iframe width="940" height="528" src="https://www.youtube.com/embed/FvOZsJVpYZg" frameborder="0"
@@ -64,7 +108,7 @@
             </div>
     </section>
 
-    <section class="conference">
+    <section class="conference" id="conference">
         <div class="heading">
             <span>INTRODUCTION</span>
             <h2>You Are Invited To Our Annual Conference</h2>
@@ -101,7 +145,7 @@
         <div class="container">
             <div class="info">
                 <span>ABOUT</span>
-                <h2>Business<br>Event</h2>
+                <h2>Business<br> Event</h2>
                 <hr>
                 <p>Make sure to visit the Instructions and Resources Page<br> of this template to get the most of it.
                 </p>
@@ -495,6 +539,250 @@
             </div>
         </div>
     </section>
+
+    <section class="tickets">
+        <span>TICKETS</span>
+        <h2>Ticket Pricing</h2>
+        <hr>
+        <p>Etiam tristique, metus pretium rutrum elementum, risus tortor euismod urna lentesque<br> accumsan.</p>
+        <div class="container">
+            <div class="card">
+                <div class="pic">
+                    <div class="price">
+                        <div>
+                            <span>$</span>
+                            <h2>49</h2>
+                        </div>
+                        <p>Bronze</p>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="desc">
+                        <i class="fas fa-check"></i>
+                        <p>Get entrance to all events and sessions</p>
+                    </div>
+                    <div class="desc">
+                        <i class="fas fa-check"></i>
+                        <p>Unlimited cups of coffee with<br> your carnet</p>
+                    </div>
+                    <div class="desc">
+                        <i class="fas fa-times close"></i>
+                        <p>Meet in person your favorite<br> speakers</p>
+                    </div>
+                    <div class="desc">
+                        <i class="fas fa-times close"></i>
+                        <p>Get Access to all Audio and<br> Video Files</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="pic">
+                    <div class="price">
+                        <div>
+                            <span>$</span>
+                            <h2>59</h2>
+                        </div>
+                        <p>Gold</p>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="desc">
+                        <i class="fas fa-check"></i>
+                        <p>Get entrance to all events and sessions</p>
+                    </div>
+                    <div class="desc">
+                        <i class="fas fa-check"></i>
+                        <p>Unlimited cups of coffee with<br> your carnet</p>
+                    </div>
+                    <div class="desc">
+                        <i class="fas fa-times close"></i>
+                        <p>Meet in person your favorite<br> speakers</p>
+                    </div>
+                    <div class="desc">
+                        <i class="fas fa-times close"></i>
+                        <p>Get Access to all Audio and<br> Video Files</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="pic">
+                    <div class="price">
+                        <div>
+                            <span>$</span>
+                            <h2>79</h2>
+                        </div>
+                        <p>Diamond</p>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="desc">
+                        <i class="fas fa-check"></i>
+                        <p>Get entrance to all events and sessions</p>
+                    </div>
+                    <div class="desc">
+                        <i class="fas fa-check"></i>
+                        <p>Unlimited cups of coffee with<br> your carnet</p>
+                    </div>
+                    <div class="desc">
+                        <i class="fas fa-times close"></i>
+                        <p>Meet in person your favorite<br> speakers</p>
+                    </div>
+                    <div class="desc">
+                        <i class="fas fa-times close"></i>
+                        <p>Get Access to all Audio and<br> Video Files</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">REGISTER TODAY</a>
+    </section>
+
+    <section class="gallery">
+        <span>GALLERY</span>
+        <h2>Picture Gallery</h2>
+        <hr>
+        <p>Etiam tristique, metus pretium rutrum elementum, risus tortor euismod urna, porta felis felis vel<br> dui in
+            bibendum justo vel pellentesque accumsan.</p>
+        <div class="container">
+            <div class="card">
+                <div class="box">
+                    <div class="circle" id="moduleOneOpen"><i class="fas fa-times"></i></div>
+                </div>
+                <div class="box">
+                    <div class="circle"><i class="fas fa-times"></i></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box">
+                    <div class="circle"><i class="fas fa-times"></i></div>
+                </div>
+                <div class="col">
+                    <div class="box">
+                        <div class="circle"><i class="fas fa-times"></i></div>
+                    </div>
+                    <div class="box">
+                        <div class="circle"><i class="fas fa-times"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box">
+                    <div class="circle"><i class="fas fa-times"></i></div>
+                </div>
+                <div class="box">
+                    <div class="circle"><i class="fas fa-times"></i></div>
+                </div>
+                <div class="box">
+                    <div class="circle"><i class="fas fa-times"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="address">
+        <div class="info">
+            <div class="info-wrap">
+                <span>VENUE</span>
+                <h2>Houston<br>Trade<br>Center</h2>
+                <hr>
+                <p>This 15-17 of December we will be gathering in the Houston Trade Center.</p>
+                <div class="row">
+                    <p>ADDRESS</p>
+                    <p><i class="fas fa-map-marker-alt"></i>Lakewood Street 123, Houston, Texas.</p>
+                </div>
+                <div class="row">
+                    <p>MORE INFORMATION</p>
+                    <p><i class="fas fa-phone-alt"></i>01.800.123.456</p>
+                </div>
+                <div class="row">
+                    <p><i class="fas fa-envelope"></i>hello@yoursite.com</p>
+                </div>
+                <div class="row">
+                    <p>FOLLOW US</p>
+                    <div class="links">
+                        <div class="icon-wrap"><a href="#"><i class="fab fa-facebook-f"></i></a></div>
+                        <div class="icon-wrap"><a href="#"><i class="fab fa-twitter"></i></a></div>
+                        <div class="icon-wrap"><a href="#"><i class="fab fa-linkedin-in"></i></a></div>
+                        <div class="icon-wrap"><a href="#"><i class="fab fa-instagram"></i></a></div>
+                        <div class="icon-wrap"><a href="#"><i class="fab fa-pinterest-p"></i></a></div>
+                        <div class="icon-wrap"><a href="#"><i class="fab fa-google-plus-g"></i></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="map">
+            <div class="mapouter">
+                <div class="gmap_canvas"><iframe width="600" height="800" id="gmap_canvas"
+                        src="https://maps.google.com/maps?q=Houston&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+                        scrolling="no" marginheight="0" marginwidth="0"></iframe></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="desc">
+            <div class="info">
+                <span>REGISTER</span>
+                <h2>2017<br>REGISTER<br>FORM</h2>
+                <hr>
+                <p>Praesent a turpis sit amet massa bibendum laoreet eu sit amet lacus.</p>
+            </div>
+        </div>
+        <div class="form">
+            <div class="form-wrap">
+                <div class="col">
+                    <p>TITLE</p>
+                    <select>
+                        <option>Select one...</option>
+                        <option>Mr.</option>
+                        <option>Mrs.</option>
+                        <option>Miss.</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <p>NAME:</p>
+                    <input type="text" name="Name" placeholder="Enter your name">
+                </div>
+                <div class="col">
+                    <p>EMAIL ADDRESS:</p>
+                    <input type="email" name="Email" placeholder="Your email...">
+                </div>
+                <div class="col">
+                    <p>MAILING ADDRESS:</p>
+                    <input type="email" name="Email" placeholder="Your mailing address...">
+                </div>
+                <div class="col">
+                    <select>
+                        <option>Select your Ticket...</option>
+                        <option>Bronze $49</option>
+                        <option>Gold $59</option>
+                        <option>Diamond $79</option>
+                    </select>
+                </div>
+                <a href="#" class="btn">SUBMIT</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="sponsors">
+        <p>SPONSORS</p>
+        <div class="container">
+            <div class="pic"><img src="img/sponsor1.png" alt="sponsor1"></div>
+            <div class="pic"><img src="img/sponsor2.png" alt="sponsor2"></div>
+            <div class="pic"><img src="img/sponsor3.png" alt="sponsor3"></div>
+            <div class="pic"><img src="img/sponsor4.png" alt="sponsor4"></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>SITE VERSION 1.5</p>
+            <p>|</p>
+            <p>IMAGE <a href="#">LICENSES</a></p>
+            <p>|</p>
+            <p>MADE BT <a href="#">PABLO RAMOS</a></p>
+        </div>
+    </footer>
 
     <script src="https://kit.fontawesome.com/a48cc21058.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

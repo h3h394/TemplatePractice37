@@ -2,12 +2,10 @@ let hidden = document.querySelector('.popup-container');
 
 document.getElementById('open').addEventListener('click', function () {
     hidden.classList.toggle('hide');
-    document.getElementById('body').style.overflowY = 'hidden';
 });
 
 document.getElementById('closeBtn').addEventListener('click', function () {
     hidden.classList.toggle('hide');
-    document.getElementById('body').style.overflowY = 'visible';
 });
 
 let module = document.querySelector('.module');
@@ -36,7 +34,6 @@ slide.forEach(function (el) {
             el.style.transform = 'rotate(0deg)';
             clicked = false
         }
-        console.log(parent);
         links.forEach(function (link) {
             link.classList.toggle('hidden');
         });
@@ -57,4 +54,81 @@ $('.day').on('click', function () {
     $('.row').fadeOut('fast', function () {
         $('.row').fadeIn(500);
     });
+});
+
+const circles = document.querySelectorAll('.gallery .circle');
+
+circles.forEach(function (circle) {
+    circle.addEventListener('click', function (event) {
+        let backgroundUrl = ''
+        if (event.target.classList.contains('circle')) {
+            backgroundUrl = window.getComputedStyle(event.target.parentNode, false).backgroundImage
+        } else if (event.target.classList.contains('fas')) {
+            backgroundUrl = window.getComputedStyle(event.target.parentNode.parentNode, false).backgroundImage
+        }
+        let galleryModule = document.querySelector('.gallery-module');
+        let galleryPicture = document.querySelector('.gallery-module .picture');
+        galleryPicture.style.backgroundImage = backgroundUrl
+        galleryModule.classList.toggle('galleryHide');
+        body.style.overflowY = 'hidden';
+    })
+})
+
+document.getElementById('moduleOneClose').addEventListener('click', function () {
+    document.querySelector('.gallery-module').classList.toggle('galleryHide');
+    body.style.overflowY = 'visible';
+});
+
+let section = document.querySelector('.conference');
+let arrow = document.getElementById('scrollUp');
+const brochure = document.getElementById("brochure");
+
+document.addEventListener('scroll', function () {
+    let sectionPosition = section.getBoundingClientRect();
+    console.log(sectionPosition);
+    if (sectionPosition.y >= 0) {
+        arrow.style.bottom = '-500px';
+        brochure.style.left = "-50vw";
+    } else if (sectionPosition.y < 0) {
+        arrow.style.bottom = '180px';
+        brochure.style.left = "-48px";
+    }
+});
+
+$('a[href*="#"]').on('click', function (e) {
+    e.preventDefault()
+    $('html, body').animate(
+        {
+            scrollTop: $($(this).attr('href')).offset().top,
+        },
+        900,
+        'linear'
+    )
+});
+
+$(window).scroll(function () {
+    var scroll = $(window).scrollTop();
+    if (scroll > 700) {
+        $("nav").css('position', 'fixed');
+    }
+    else {
+        $("nav").css('position', 'absolute');
+    }
+});
+
+let brochureModal = document.querySelector('.brochure-modal');
+let brochureClose = document.getElementById('brochureClose');
+
+document.getElementById('brochure').addEventListener('click', function () {
+    brochureModal.classList.toggle('hide');
+});
+
+brochureClose.addEventListener('click', function () {
+    brochureModal.classList.toggle('hide');
+});
+
+document.getElementById('burger').addEventListener('click', function () {
+    document.querySelector('.menu').classList.toggle('hide');
+    document.querySelector('nav .btn').classList.toggle('hide');
+    document.querySelector('nav .container').classList.toggle('hide');
 });
